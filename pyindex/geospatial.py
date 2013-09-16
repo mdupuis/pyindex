@@ -46,10 +46,8 @@ class LonLat(_LonLat):
         # These will be between [0..1]
         indexed_lon = min(
             self.MAX_LON,
-            max(
-                self.MIN_LON,
-                (self.lon + (lon_range / 2)) / lon_range
-            )
+            max(self.MIN_LON,
+                (self.lon + (lon_range / 2)) / lon_range)
         )
         indexed_lat = min(
             self.MAX_LAT,
